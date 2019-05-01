@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Your payment has been processed!</title>
+<title>You've been invited.</title>
 <!--
 
     SALTED | A RESPONSIVE EMAIL TEMPLATE
@@ -146,7 +146,7 @@
                                                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                           <tr>
                                                               <td>
-                                                                  <a href="https://storx.tech" target="_blank"><img src="https://storx.tech/assets/images/storx-logo.png" width="150" height="50" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 150px; height: 50px;" class="img-max"></a>
+                                                                  <a href="https://storx.tech" target="_blank"><img src="https://storx.tech/assets/images/storx-logo.png" width="150" height="50" border="0" alt="StorX" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 150px; height: 50px;" class="img-max"></a>
                                                               </td>
                                                             </tr>
                                                         </table>
@@ -161,10 +161,13 @@
                                     <!-- COPY -->
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tr>
-                                          <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy">Good news! Your payment of ${{amount}} has been processed. Thank you!</td>
+                                            <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy">You've been invited</td>
                                         </tr>
                                         <tr>
                                             <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #777777;" class="padding-copy">
+                                                <p>
+                                                    {{memberName}}, you've been invited to join {{teamName}}'s team on StorX.
+                                                </p>
                                             </td>
                                         </tr>
                                     </table>
@@ -179,7 +182,13 @@
                                                 <table border="0" cellspacing="0" cellpadding="0" class="responsive-table">
                                                     <tr>
                                                         <td align="center">
-
+                                                            <a 
+                                                                href="{{urlAcceptInvitation}}"
+                                                                mc:disable-tracking target="_blank"
+                                                                style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #2683FF; border-top: 15px solid #2683FF; border-bottom: 15px solid #2683FF; border-left: 25px solid #2683FF; border-right: 25px solid #2683FF; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block;"
+                                                                class="mobile-button">
+                                                                    Accept Invite
+                                                            </a>
                                                         </td>
                                                     </tr>
                                                 </table>

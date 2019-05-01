@@ -1,4 +1,4 @@
-Welcome to Storj!
+Welcome to StorX!
 =================
 
 Copy and paste the link below into a web browser to activate your account:
@@ -11,5 +11,4 @@ Copy and paste the link below into a web browser to activate your account:
 
 ---
 
-Cheers,
-The Storj Team
+Build on XinFin (XDC) Blockchain Network as an open source initiative.

@@ -1,10 +1,13 @@
-{{senderUser}} gave you 10 STORX.  
+{{senderUser}} Gifted you 10 STORX Tokens.  
 ====================================
 
-StorX Drive is a cloud storage service (pretty much like Dropbox, Google Drive etc). 
-Unlike traditional services, however, StorX truly respects your privacy. 
-Everything you upload to StorX Drive is encrypted at all times, and no one other than you can access the files you upload. 
-You can sign up on any of StorX's plans for free. You will automatically get 10 STORX.
+Hello,
+
+I am excited to announce that I have made a switch to @StorXNetwork A High Performance Truly Decentralized Storage Network. 
+With StorX, My data is 100 % Secure, No 3rd Party can ever snoopin or access my data.  
+Each data uploaded to StorX is encrypted and splits into multiple pieces to ensure no one can ever access the files uploaded. 
+
+You can sign up on StorX's 2 GB Welcome plan for FREE.  On singnup you will automatically be credited with 10 STORX tokens.
 
 Sign up for free with the link below to unlock your exclusive 10 STORX credit!
 

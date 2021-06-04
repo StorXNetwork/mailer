@@ -1,18 +1,13 @@
-{{senderUser}} Gifted you 10 STORX Tokens.  
+{{senderUser}} Gifted you 10 SRX Tokens.  
 ====================================
 
 Hello,
+I am excited to inform that; I have switched to StorX Network a High Performance Truly Decentralized Cloud Storage Network. With StorX, My data is 100% Secure. Every file uploaded to StorX Network is first encrypted and then splits into multiple fragments, Multiple copies for such fragments are then distributed to nodes spread worldwide.
 
-I am excited to announce that I have made a switch to @StorXNetwork A High Performance Truly Decentralized Storage Network. 
-With StorX, My data is 100 % Secure, No 3rd Party can ever snoopin or access my data.  
-Each data uploaded to StorX is encrypted and splits into multiple pieces to ensure no one can ever access the files uploaded. 
+You can sign up on StorX's 2 GB Welcome plan for FREE. On signup you will automatically be credited with 10 SRX tokens.
 
-You can sign up on StorX's 2 GB Welcome plan for FREE.  On singnup you will automatically be credited with 10 STORX tokens.
-
-Sign up for free with the link below to unlock your exclusive 10 STORX credit!
-
-{{url}}
+Sign up with the link below to unlock your exclusive 10 SRX credit! {{url}}
 
 ---
 
-Build on XinFin (XDC) Blockchain Network as an open source initiative.
+Copyright © 2021 StorX. All Rights reserved.

@@ -87,6 +87,7 @@
 		margin: 0;
 		padding: 0;
 		width: 100% !important;
+		background-color: #eef2f8;
 	}
 	/* iOS BLUE LINKS */
 	
@@ -117,6 +118,10 @@
 	
 	@media screen and (max-width: 525px) {
 		/* ALLOWS FOR FLUID TABLES */
+		.paraText {
+			font-size: 15px;
+			line-height: 22px;
+		}
 		table[class="wrapper"] {
 			width: 100% !important;
 		}
@@ -138,6 +143,7 @@
 		img[class="img-max"] {
 			max-width: 100% !important;
 			height: auto !important;
+			margin: 0 auto !important;
 		}
 		/* FULL-WIDTH TABLES */
 		table[class="responsive-table"] {
@@ -210,7 +216,7 @@
 								<table width="100%" border="0" cellspacing="0" cellpadding="0">
 									<tr>
 										<td>
-											<a href="https://storx.tech" target="_blank"><img src="https://storx.tech/assets/images/storx-logo.png" width="150" height="50" border="0" alt="storx.tech" style="display: inline-block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 150px; height: 50px;" class="img-max"></a>
+											<a href="https://storx.tech" target="_blank"><img src="https://storx.tech/assets/images/storx-logo.png" width="150" height="50" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; text-align: center; width: 150px; height: 50px;" class="img-max"></a>
 										</td>
 									</tr>
 								</table>
@@ -238,7 +244,7 @@
 													<td class="padding-copy">
 														<table width="100%" border="0" cellspacing="0" cellpadding="0">
 															<tr>
-																<td align="center"><img src="images/emoji.png" width="55" height="55" border="0" style="display: inline-block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 55px; height: 55px;" class="img-max"> </td>
+																<td align="center"><img src="https://storx.tech/assets/images/email-template-assets/emoji.png" width="55" height="55" border="0" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; text-align: center; width: 55px; height: 55px;" class="img-max"> </td>
 															</tr>
 														</table>
 													</td>
@@ -255,11 +261,11 @@
 												<td align="center" style="font-size: 22px; font-family: Helvetica, Arial, sans-serif; color: #333333; font-weight: 500; padding-top: 30px;" class="padding-copy">{{senderUser}} Gifted you 10 SRX Tokens</td>
 											</tr>
 											<tr>
-												<td align="center" style="padding: 20px 30px; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #777777;text-align:left;" class="padding-copy">
-													<p>Hello,
+												<td align="center" style="padding: 20px 30px; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #777777;text-align:left!important;" class="padding-copy">
+													<p class="paraText">Hello,
 														<br> I am excited to inform that; I have switched to StorX Network a High Performance Truly Decentralized Cloud Storage Network. With StorX, My data is 100% Secure. Every file uploaded to StorX Network is first encrypted and then splits into multiple fragments, Multiple copies for such fragments are then distributed to nodes spread worldwide.</p>
-													<p>You can sign up on StorX's 2 GB Welcome plan for FREE. On signup you will automatically be credited with 10 SRX tokens.</p>
-													<p>Sign up with the link below to unlock your exclusive 10 SRX credit! {{url}} </p>
+													<p class="paraText">You can sign up on StorX's 2 GB Welcome plan for FREE. On signup you will automatically be credited with 10 SRX tokens.</p>
+													<p class="paraText">Sign up with the link below to unlock your exclusive 10 SRX credit! {{url}} </p>
 												</td>
 											</tr>
 										</table>
@@ -270,10 +276,10 @@
 										<!-- BULLETPROOF BUTTON -->
 										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
 											<tr>
-												<td align="center" style="padding: 25px 0 30px 0;" class="padding-copy-big">
+												<td align="center" style="padding: 25px 0 30px 0;" class="padding-copy">
 													<table border="0" cellspacing="0" cellpadding="0" class="responsive-table">
 														<tr>
-															<td align="center"> {{#if redirect}} <a href="{{url}}&redirect={{redirect}}" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #ed8619; border-top: 15px solid #ed8619; border-bottom: 15px solid #ed8619; border-left: 25px solid #ed8619; border-right: 25px solid #ed8619; border-radius: 50px; -webkit-border-radius: 50px; -moz-border-radius: 50px; display: inline-block;margin: 0 auto;text-align: center;" class="mobile-button">Signup & Claim</a> {{else}} <a href="{{url}}" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #ed8619; border-top: 15px solid #ed8619; border-bottom: 15px solid #ed8619; border-left: 25px solid #ed8619; border-right: 25px solid #ed8619; border-radius: 50px; -webkit-border-radius: 50px; -moz-border-radius: 50px; display: inline-block;margin: 0 auto;text-align: center;" class="mobile-button">Signup & Claim</a> {{/if}} </td>
+															<td align="center" style="padding-bottom:20px;"> {{#if redirect}} <a href="{{url}}&redirect={{redirect}}" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #ed8619; border-top: 15px solid #ed8619; border-bottom: 15px solid #ed8619; border-left: 25px solid #ed8619; border-right: 25px solid #ed8619; border-radius: 50px; -webkit-border-radius: 50px; -moz-border-radius: 50px; display: inline-block;margin: 0 auto;text-align: center;" class="mobile-button">Signup & Claim</a> {{else}} <a href="{{url}}" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #ed8619; border-top: 15px solid #ed8619; border-bottom: 15px solid #ed8619; border-left: 25px solid #ed8619; border-right: 25px solid #ed8619; border-radius: 50px; -webkit-border-radius: 50px; -moz-border-radius: 50px; display: inline-block;margin: 0 auto;text-align: center;" class="mobile-button">Signup & Claim</a> {{/if}} </td>
 														</tr>
 													</table>
 												</td>
@@ -298,31 +304,31 @@
 							<table width="550" border="0" cellspacing="0" cellpadding="0" align="center" class="responsive-table">
 								<tr>
 									<td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#777777; width: 20px; height: 20px;">
-										<a href="https://twitter.com/StorXNetwork" target="_blank"><img src="images/twitter.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
+										<a href="https://twitter.com/StorXNetwork" target="_blank"><img src="https://storx.tech/assets/images/email-template-assets/twitter.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
 									</td>
 									<td width="15px">&nbsp;</td>
 									<td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#777777; width: 20px; height: 20px;">
-										<a href="https://www.linkedin.com/company/storxnetwork" target="_blank"><img src="images/linkedin.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
+										<a href="https://www.linkedin.com/company/storxnetwork" target="_blank"><img src="https://storx.tech/assets/images/email-template-assets/linkedin.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
 									</td>
 									<td width="15px">&nbsp;</td>
 									<td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#777777; width: 20px; height: 20px;">
-										<a href="https://www.facebook.com/StorXNetwork" target="_blank"><img src="images/facebook.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
+										<a href="https://www.facebook.com/StorXNetwork" target="_blank"><img src="https://storx.tech/assets/images/email-template-assets/facebook.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
 									</td>
 									<td width="15px">&nbsp;</td>
 									<td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#777777; width: 20px; height: 20px;">
-										<a href="https://t.me/StorXNetwork" target="_blank"><img src="images/telegram.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
+										<a href="https://t.me/StorXNetwork" target="_blank"><img src="https://storx.tech/assets/images/email-template-assets/telegram.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
 									</td>
 									<td width="15px">&nbsp;</td>
 									<td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#777777; width: 20px; height: 20px;">
-										<a href="https://medium.com/storx-network" target="_blank"><img src="images/medium.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
+										<a href="https://medium.com/storx-network" target="_blank"><img src="https://storx.tech/assets/images/email-template-assets/medium.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
 									</td>
 									<td width="15px">&nbsp;</td>
 									<td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#777777; width: 20px; height: 20px;">
-										<a href="https://www.reddit.com/r/StorXNetwork" target="_blank"><img src="images/reddit.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
+										<a href="https://www.reddit.com/r/StorXNetwork" target="_blank"><img src="https://storx.tech/assets/images/email-template-assets/reddit.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
 									</td>
 									<td width="15px">&nbsp;</td>
 									<td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#777777; width: 20px; height: 20px;">
-										<a href="https://discord.com/invite/ha4Jufj2Nm" target="_blank"><img src="images/discord.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
+										<a href="https://discord.com/invite/ha4Jufj2Nm" target="_blank"><img src="https://storx.tech/assets/images/email-template-assets/discord.png" width="20" height="20" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 20px; height: 20px;" class="img-max"></a>
 									</td>
 								</tr>
 							</table>

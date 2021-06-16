@@ -1,237 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>It's not you, it's me..</title>
-<!--
-
+    <title>It's not you, it's me..</title>
+    <!--
     SALTED | A RESPONSIVE EMAIL TEMPLATE
     =====================================
-
     Based on code used and tested by Litmus (@litmusapp)
     Originally developed by Kevin Mandeville (@KEVINgotbounce)
     Cleaned up by Jason Rodriguez (@rodriguezcommaj)
     Presented by A List Apart (@alistapart)
-
     Email is surprisingly hard. While this has been thoroughly tested, your mileage may vary.
     It's highly recommended that you test using a service like Litmus and your own devices.
-
     Enjoy!
+	-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <style type="text/css">
+            /* CLIENT-SPECIFIC STYLES */
+            #outlook a {
+                padding: 0;
+            }
+            /* Force Outlook to provide a "view in browser" message */
+            .ReadMsgBody {
+                width: 100%;
+            }
+            .ExternalClass {
+                width: 100%;
+            }
+            /* Force Hotmail to display emails at full width */
+            .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div {
+                line-height: 100%;
+            }
+            /* Force Hotmail to display normal line spacing */
+            body,
+            table,
+            td,
+            a {
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+            }
+            /* Prevent WebKit and Windows mobile changing default text sizes */
+            table,
+            td {
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+            }
+            /* Remove spacing between tables in Outlook 2007 and up */
+            img {
+                -ms-interpolation-mode: bicubic;
+            }
+            /* Allow smoother rendering of resized image in Internet Explorer */
+            /* RESET STYLES */
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            img {
+                border: 0;
+                height: auto;
+                line-height: 100%;
+                outline: none;
+                text-decoration: none;
+            }
+            table {
+                border-collapse: collapse !important;
+            }
+            body {
+                height: 100% !important;
+                margin: 0;
+                padding: 0;
+                width: 100% !important;
+            }
+            /* iOS BLUE LINKS */
+            .appleBody a {
+                color: #68440a;
+                text-decoration: none;
+            }
+            .appleFooter a {
+                color: #999999;
+                text-decoration: none;
+            }
+            td[class="padding-copy"] {
+                padding: 10px 8% 10px 8% !important;
+                text-align: center !important;
+            }
 
- -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<style type="text/css">
-    /* CLIENT-SPECIFIC STYLES */
-    #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
-    .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
-    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
-    body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
-    table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
-    img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+            td[class="padding-copy-big"] {
+                padding: 10px 8% 30px 8% !important;
+                text-align: center !important;
+            }
+            td[class="padd-lr"] .responsive-table {
+                max-width: 350px !important;
+            }
+			.headingText {
+				padding: 0px !important;
+				margin: 0px !important;
+            }
+            /* MOBILE STYLES */
+            @media screen and (max-width: 525px) {
+                /* ALLOWS FOR FLUID TABLES */
+                .paraText {
+                    font-size: 15.5px !important;
+                    line-height: 22px !important;
+                }
+				.headingText {
+                    font-size: 18px !important;
+                    line-height: 26px !important;
+                }
+                table[class="wrapper"] {
+                    width: 100% !important;
+                }
+                /* ADJUSTS LAYOUT OF LOGO IMAGE */
+                td[class="logo"] {
+                    text-align: center;
+                    padding: 20px 0 20px 0 !important;
+                }
+                td[class="logo"] img {
+                    margin: 0 auto !important;
+                }
+                /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+                td[class="mobile-hide"] {
+                    display: none;
+                }
+                img[class="mobile-hide"] {
+                    display: none !important;
+                }
+                img[class="img-max"] {
+                    max-width: 100% !important;
+                    height: auto !important;
+                    margin: 0 auto !important;
+                }
+                /* FULL-WIDTH TABLES */
+                table[class="responsive-table"] {
+                    width: 100% !important;
+                }
+                /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+                td[class="padding"] {
+                    padding: 10px 5% 15px 5% !important;
+                }
+                td[class="padding-copy"] {
+                    padding: 10px 6% 10px 6% !important;
+                    text-align: center !important;
+                }
+                td[class="padding-copy-big"] {
+                    padding: 10px 6% 30px 6% !important;
+                    text-align: center !important;
+                }
+                td[class="padding-meta"] {
+                    padding: 30px 5% 0px 5% !important;
+                    text-align: center !important;
+                }
+                td[class="no-pad"] {
+                    padding: 0 0 20px 0 !important;
+                }
+                td[class="no-padding"] {
+                    padding: 0 !important;
+                }
+                td[class="section-padding"] {
+                    padding: 50px 15px 50px 15px !important;
+                }
+                td[class="section-padding-small"] {
+                    padding: 15px 15px 20px 15px !important;
+                }
+                td[class="padd-lr"] {
+                    padding: 15px 70px 20px 70px !important;
+                }
+                td[class="section-padding-bottom-image"] {
+                    padding: 50px 15px 0 15px !important;
+                }
+                /* ADJUST BUTTONS ON MOBILE */
+                td[class="mobile-wrapper"] {
+                    padding: 10px 5% 15px 5% !important;
+                }
+                table[class="mobile-button-container"] {
+                    margin: 0 auto !important;
+                    width: 100% !important;
+                }
+                a[class="mobile-button"] {
+                    width: 80% !important;
+                    padding: 15px !important;
+                    border: 0 !important;
+                    font-size: 16px !important;
+                    margin: 0 auto !important;
+                    text-align: center !important;
+                }
+            }
+        </style>
+    </head>
 
-    /* RESET STYLES */
-    body{margin:0; padding:0;}
-    img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
-    table{border-collapse:collapse !important;}
-    body{height:100% !important; margin:0; padding:0; width:100% !important;}
-
-    /* iOS BLUE LINKS */
-    .appleBody a {color:#68440a; text-decoration: none;}
-    .appleFooter a {color:#999999; text-decoration: none;}
-
-    /* MOBILE STYLES */
-    @media screen and (max-width: 525px) {
-
-        /* ALLOWS FOR FLUID TABLES */
-        table[class="wrapper"]{
-          width:100% !important;
-        }
-
-        /* ADJUSTS LAYOUT OF LOGO IMAGE */
-        td[class="logo"]{
-          text-align: left;
-          padding: 20px 0 20px 0 !important;
-        }
-
-        td[class="logo"] img{
-          margin:0 auto!important;
-        }
-
-        /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
-        td[class="mobile-hide"]{
-          display:none;}
-
-        img[class="mobile-hide"]{
-          display: none !important;
-        }
-
-        img[class="img-max"]{
-          max-width: 100% !important;
-          height:auto !important;
-        }
-
-        /* FULL-WIDTH TABLES */
-        table[class="responsive-table"]{
-          width:100%!important;
-        }
-
-        /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
-        td[class="padding"]{
-          padding: 10px 5% 15px 5% !important;
-        }
-
-        td[class="padding-copy"]{
-          padding: 10px 5% 10px 5% !important;
-          text-align: center;
-        }
-
-        td[class="padding-meta"]{
-          padding: 30px 5% 0px 5% !important;
-          text-align: center;
-        }
-
-        td[class="no-pad"]{
-          padding: 0 0 20px 0 !important;
-        }
-
-        td[class="no-padding"]{
-          padding: 0 !important;
-        }
-
-        td[class="section-padding"]{
-          padding: 50px 15px 50px 15px !important;
-        }
-
-        td[class="section-padding-bottom-image"]{
-          padding: 50px 15px 0 15px !important;
-        }
-
-        /* ADJUST BUTTONS ON MOBILE */
-        td[class="mobile-wrapper"]{
-            padding: 10px 5% 15px 5% !important;
-        }
-
-        table[class="mobile-button-container"]{
-            margin:0 auto;
-            width:100% !important;
-        }
-
-        a[class="mobile-button"]{
-            width:80% !important;
-            padding: 15px !important;
-            border: 0 !important;
-            font-size: 16px !important;
-        }
-
-    }
-</style>
-</head>
-<body style="margin: 0; padding: 0;">
-
-<!-- ONE COLUMN SECTION -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-        <td bgcolor="#ffffff" align="center" style="padding: 70px 15px 70px 15px;" class="section-padding">
-            <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
+    <body style="margin: 0; padding: 0;">
+        <!-- HEADER -->
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+            <tbody>
                 <tr>
-                    <td>
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tr>
-                                <td>
-                                    <!-- HERO IMAGE -->
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                        <tbody>
-                                             <tr>
-                                                  <td class="padding-copy">
-                                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                                          <tr>
-                                                              <td>
-                                                                  <a href="https://storx.tech" target="_blank"><img src="https://storx.tech/assets/images/storx-logo.png" width="150" height="50" border="0" alt="storx.tech" style="display: block; padding: 0; margin:0 auto; color: #2683ff; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 150px; height: 50px;" class="img-max"></a>
-                                                              </td>
-                                                            </tr>
-                                                        </table>
-                                                  </td>
-                                              </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <!-- COPY -->
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                        <tr>
-                                            <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy">See you soon!</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #777777;" class="padding-copy">
-                                                <p>
-                                                    We're really sad to see you go.. Are you sure you want to leave? If there's anything we can do to improve your overall experience with us, let us know and we'll make sure we improve. We can change :)
-                                                    
-                                                To continue with your account deactivation, please 
+                    <td align="center" valign="top">
+                        <!-- Content Table Open// -->
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="max-width: 550px; margin: 0 auto;">
+                            <tbody>
+                                <tr>
+                                    <td align="center" valign="top" style="padding: 70px 0px 0px 0px;">
+                                        <!-- Logo// -->
+                                        <a href="https://storx.tech" target="_blank" style="color:#FFFFFF;">
+                                            <img src="https://storx.tech/assets/images/storx-logo.png" width="150" height="50" border="0" alt="storx.tech" style="display: inline-block;padding: 0;margin: 0 auto;color: #FFFFFF;text-decoration: none;font-family: Helvetica, arial, sans-serif;font-size: 16px;margin-left: 2px;margin-right: 2px;width: 150px;height: 50px;" class="img-max"/>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Content Table Close// -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- HEADER Close// -->
+
+        <!-- ONE COLUMN SECTION -->
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" style="padding: 10px 15px 25px 15px;" class="section-padding-small">
+                    <table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="responsive-table">
+                        <tr>
+                            <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background: #f7f8fb; border-radius: 6px;">
+                                    <tr>
+                                        <td align="center">
+                                            <!-- HERO IMAGE -->
+                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" class="padding-copy">
+                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td align="center" style="padding-top: 15px;">
+                                                                        <img src="https://storx.tech/assets/images/email-template-assets/deactivate.png" width="55" height="55" border="0" style="display: block;padding: 0;margin: 0 auto;text-decoration: none;font-family: Helvetica, arial, sans-serif;font-size: 16px;text-align: center;width: 55px;height: 55px;" class="img-max"/>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!-- COPY -->
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td align="center" style="font-size: 22px; font-family: Helvetica, Arial, sans-serif; color: #333333; font-weight: 500; padding-top: 30px; padding-left: 6%; padding-right: 6%;" class="padding-copy">
+                                                        <p style="padding:0px;margin:0px;" class="headingText">See you soon!</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding: 20px 30px 5px 30px; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #777777; text-align: left !important;" class="padding-copy">
+                                                        <p style="padding:0px;margin:0px;" class="paraText">
+                                                            We're really sad to see you go.<br>
+                                                            Are you sure you want to leave?<br>
+                                                            If there's anything we can do to improve your overall experience with us, let us know and we'll make sure we work on it. We can change :) To continue with your account deactivation, please 
                                                 {{#if redirect}}
                                                     <a href="{{url}}/deactivations/{{token}}?redirect={{redirect}}">click here</a>.
                                                 {{else}}
                                                     <a href="{{url}}/deactivations/{{token}}">click here</a>.
-                                                {{/if}}
-                                                </p>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <!-- BULLETPROOF BUTTON -->
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
-                                        <tr>
-                                            <td align="center" style="padding: 25px 0 0 0;" class="padding-copy">
-                                                <table border="0" cellspacing="0" cellpadding="0" class="responsive-table">
-                                                    <tr>
-                                                        <td align="center">
-                                                        {{#if redirect}}
-                                                            <a href="{{url}}/deactivations/{{token}}?redirect={{redirect}}" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #2683FF; border-top: 15px solid #2683FF; border-bottom: 15px solid #2683FF; border-left: 25px solid #2683FF; border-right: 25px solid #2683FF; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block;" class="mobile-button">Deactivate Account</a>
-                                                        {{else}}
-                                                            <a href="{{url}}/deactivations/{{token}}" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #2683FF; border-top: 15px solid #2683FF; border-bottom: 15px solid #2683FF; border-left: 25px solid #2683FF; border-right: 25px solid #2683FF; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block;" class="mobile-button">Deactivate Account</a>
-                                                        {{/if}}
-                                                        
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
+                                                {{/if}}</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <!-- BULLETPROOF BUTTON -->
+                                            <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
+                                                <tr>
+                                                    <td align="center" valign="middle" style="padding: 25px 0 30px 0;" class="padding-copy">
+                                                        <table align="center" border="0" cellspacing="0" cellpadding="0" class="responsive-table">
+                                                            <tr>
+                                                                <td align="center" style="padding-bottom: 20px;">
+                                                                    {{#if redirect}}
+                                                            			<a href="{{url}}/deactivations/{{token}}?redirect={{redirect}}" target="_blank" style="font-size: 16px;font-family: Helvetica, Arial, sans-serif;font-weight: normal;color: #ffffff;text-decoration: none;background-color: #ed8619;border-top: 15px solid #ed8619;border-bottom: 15px solid #ed8619;border-left: 25px solid #ed8619;border-right: 25px solid #ed8619;border-radius: 50px;-webkit-border-radius: 50px;-moz-border-radius: 50px;display: inline-block;margin: 0 auto;text-align: center;" class="mobile-button">Deactivate Account</a>
+                                                        			{{else}}
+                                                            			<a href="{{url}}/deactivations/{{token}}" target="_blank" style="font-size: 16px;font-family: Helvetica, Arial, sans-serif;font-weight: normal;color: #ffffff;text-decoration: none;background-color: #ed8619;border-top: 15px solid #ed8619;border-bottom: 15px solid #ed8619;border-left: 25px solid #ed8619;border-right: 25px solid #ed8619;border-radius: 50px;-webkit-border-radius: 50px;-moz-border-radius: 50px;display: inline-block;margin: 0 auto;text-align: center;" class="mobile-button">Deactivate Account</a>
+                                                        			{{/if}}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
 
-<!-- FOOTER -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-        <td bgcolor="#ffffff" align="center">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <!-- FOOTER -->
+        <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;" width="100%">
+            <tbody>
                 <tr>
-                    <td style="padding: 20px 0px 20px 0px;">
-                        <!-- FOOTER COPY -->
-                        <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="responsive-table">
-                            <tr>
-                                <td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#777777;">
-                                    <span class="appleFooter" style="color:#777777;">Build on XinFin (XDC) Blockchain Network as an open source initiative.</span>
-                                </td>
-                            </tr>
+                    <td align="center" valign="top">
+                        <!-- Content Table Open// -->
+                        <table border="0" cellpadding="0" cellspacing="0" style="max-width: 550px; margin: 0 auto;" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;" class="socialLinks">
+                                        <!-- Social Links (Twitter)// -->
+                                        <a href="https://twitter.com/StorXNetwork" target="_blank" style="color:#FFFFFF;">
+                                            <img src="https://storx.tech/assets/images/email-template-assets/twitter.png" width="30" height="30" border="0" alt="storx.tech" style="display:inline-block;padding:0;margin:0 auto;text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;margin-left:2px;margin-right:2px;width:30px;height:30px" class="img-max">
+                                        </a>
+                                        <!-- Social Links (LinkedIn)// -->
+                                        <a href="https://www.linkedin.com/company/storxnetwork" target="_blank" style="color:#FFFFFF;">
+                                            <img src="https://storx.tech/assets/images/email-template-assets/linkedin.png" width="30" height="30" border="0" alt="storx.tech" style="display:inline-block;padding:0;margin:0 auto;text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;margin-left:2px;margin-right:2px;width:30px;height:30px" class="img-max">
+                                        </a>
+                                        <!-- Social Links (Facebook)// -->
+                                        <a href="https://www.facebook.com/StorXNetwork" target="_blank" style="color:#FFFFFF;">
+                                            <img src="https://storx.tech/assets/images/email-template-assets/facebook.png" width="30" height="30" border="0" alt="storx.tech" style="display:inline-block;padding:0;margin:0 auto;text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;margin-left:2px;margin-right:2px;width:30px;height:30px" class="img-max">
+                                        </a>
+                                        <!-- Social Links (Telegram)// -->
+                                        <a href="https://t.me/StorXNetwork" target="_blank" style="color:#FFFFFF;">
+                                            <img src="https://storx.tech/assets/images/email-template-assets/telegram.png" width="30" height="30" border="0" alt="storx.tech" style="display:inline-block;padding:0;margin:0 auto;text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;margin-left:2px;margin-right:2px;width:30px;height:30px" class="img-max">
+                                        </a>
+                                        <!-- Social Links (Medium)// -->
+                                        <a href="https://medium.com/storx-network" target="_blank" style="color:#FFFFFF;">
+                                            <img src="https://storx.tech/assets/images/email-template-assets/medium.png" width="30" height="30" border="0" alt="storx.tech" style="display:inline-block;padding:0;margin:0 auto;text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;margin-left:2px;margin-right:2px;width:30px;height:30px" class="img-max">
+                                        </a>
+                                        <!-- Social Links (Reddit)// -->
+                                        <a href="https://www.reddit.com/r/StorXNetwork" target="_blank" style="color:#FFFFFF;">
+                                            <img src="https://storx.tech/assets/images/email-template-assets/reddit.png" width="30" height="30" border="0" alt="storx.tech" style="display:inline-block;padding:0;margin:0 auto;text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;margin-left:2px;margin-right:2px;width:30px;height:30px" class="img-max">
+                                        </a>
+                                        <!-- Social Links (Discord)// -->
+                                        <a href="https://discord.com/invite/ha4Jufj2Nm" target="_blank" style="color:#FFFFFF;">
+                                            <img src="https://storx.tech/assets/images/email-template-assets/discord.png" width="30" height="30" border="0" alt="storx.tech" style="display:inline-block;padding:0;margin:0 auto;text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;margin-left:2px;margin-right:2px;width:30px;height:30px" class="img-max">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="middle" style="padding: 15px 0px 5px 0px;">
+                                        <table width="550" border="0" cellspacing="0" cellpadding="0" align="center" class="responsive-table">
+                                            <tr>
+                                                <td align="center" valign="middle" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color: #a1a5aa; word-break: break-word; clear: left; text-align: center;"
+                                                >
+                                                    <a href="https://storx.io/new" target="_blank" onMouseOver="this.style.color='#5f5e5e'" onMouseOut="this.style.color='#a1a5aa'" style="color: #a1a5aa; text-decoration: underline; padding: 5px;">SignUp</a>
+                                                    &nbsp;|&nbsp;
+                                                    <a href="https://storx.tech/host-node.html" target="_blank" onMouseOver="this.style.color='#5f5e5e'" onMouseOut="this.style.color='#a1a5aa'" style="color: #a1a5aa; text-decoration: underline; padding: 5px;">Host a Node</a>
+                                                    &nbsp;|&nbsp;
+                                                    <a href="https://storx.tech/community-bounty.html" target="_blank" onMouseOver="this.style.color='#5f5e5e'" onMouseOut="this.style.color='#a1a5aa'" style="color: #a1a5aa; text-decoration: underline; padding: 5px;">Community Bounty</a>
+                                                    &nbsp;|&nbsp;
+                                                    <a href="https://storx.tech/support.html" target="_blank" onMouseOver="this.style.color='#5f5e5e'" onMouseOut="this.style.color='#a1a5aa'" style="color: #a1a5aa; text-decoration: underline; padding: 5px;">Community Support</a>
+                                                    &nbsp;|&nbsp;
+                                                    <a href="https://storx.tech/faqs.html" target="_blank" onMouseOver="this.style.color='#5f5e5e'" onMouseOut="this.style.color='#a1a5aa'" style="color: #a1a5aa; text-decoration: underline; padding: 5px;">FAQs</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="middle" style="padding: 0px 0px 20px 0px;">
+                                        <table width="550" border="0" cellspacing="0" cellpadding="0" align="center" class="responsive-table">
+                                            <tr>
+                                                <td align="center" style="padding: 0px; font-size: 12px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #a1a5aa; text-align: center;" class="padding-copy">
+                                                    <p style="padding: 0px; margin: 0px;">Copyright &copy; 2021 StorX. All Rights reserved.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
+                        <!-- Content Table Close// -->
                     </td>
                 </tr>
-            </table>
-        </td>
-    </tr>
-</table>
 
-</body>
+            </tbody>
+        </table>
+        <!-- FOOTER Close// -->
+    </body>
 </html>
